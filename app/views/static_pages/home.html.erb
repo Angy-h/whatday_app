@@ -15,17 +15,50 @@
   </div>
 <% else %>
 
-  <div class="center jumbotron">
-    <h1>今日は何の日？へようこそ</h1>
-
-    <h2>
-    シェアする一日、日本の暦
-    Japanese lunar calendar
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <div class="jumbotron">
+    <div class="container-day">
+          <div class="information">
+            <div class="day_word">
+              <p>今日は、<%= Time.now %> <span id="add1">元旦</span><span id="add2">です！</span></p>
+              <%= Time.now %>
+            </div>
+            <article class="day-quiz">
+              <div class="todays-quiz">
+                <h2>Today’s quiz</h2>
+                <p class="todays-quiz-text">
+                  テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                </p>
+                <p id="answer">正解を見る</p>
+              </div>
+              <div class="pick-up">
+                <h2>今日は何する？</h2>
+                <p class="pick-up-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+            </article>
+            <article class="day-keyword">
+              <h2>今日に関係する言葉</h2>
+              <p class="today-keyword">七福神、四方拝、若水</p>
+            </article>
+          </div>
+          <div class="search-link">
+            <%= link_to image_tag("ask-google.png", alt: "Googleに聞くのボタン", width: "250"),
+                      "http://google.co.kr" %>
+            <%= link_to image_tag("link-library.png", alt: "図書館リンクのボタン", width: "250"),
+                      "https://www.ndl.go.jp/" %>
+            <%= link_to image_tag("ask-chatgpt.png", alt: "ChatGPTに聞くのボタン", width: "250"),
+                      "https://openai.com/chatgpt/" %>
+          </div>
+        </div>
   </div>
 
-  <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"),
-                        "https://rubyonrails.org/" %>
+  <div class="center jumbotron">
+  <h1>こちらにはSNS</h1>
+
+  <h2>
+ ポスト
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
 <% end %>

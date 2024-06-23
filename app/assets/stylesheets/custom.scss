@@ -273,3 +273,63 @@ span.image {
     border: 0;
   }
 }
+
+.container-day {
+  display: flex;
+}
+
+#add1{
+  background-color: pink;
+  padding: 10px 40px;
+}
+
+.day-quiz {
+  width: 800px;
+  height: 290px;
+  display: flex;
+ }
+
+.day-quiz div {
+  width: 400px;
+  height: 290px;
+  padding: 20px;
+}
+.todays-quiz {
+  border: #f3fbc3 solid 6px;
+  border-radius: 15px;
+}
+.todays-quiz h2 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.todays-quiz-text {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+#answer {
+  font-weight: bold;
+  text-align: right;
+}
+
+.pick-up h2 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.pick-up-text {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.day-keyword h2 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
