@@ -19,26 +19,29 @@
     <div class="container-day">
           <div class="information">
             <div class="day_word">
-              <p>今日は、<%= Date.today.month %>月<%= Date.today.day %>日　 <span id="add1">元旦</span><span id="add2">です！</span></p>
-              <%= Date.today %>
+              <% if @days_info %>
+            <p>今日は、<%= Date.today.month %>月<%= Date.today.day %>日　 <span id="add1"><%= @days_info.main_keyword %></span><span id="add2">です！</span></p>
+          <% else %>
+            <p>今日は、<%= Date.today.month %>月<%= Date.today.day %>日　 <span id="add1">情報がありません</span><span id="add2">です！</span></p>
+          <% end %>
             </div>
-            <article class="day-quiz">
-              <div class="todays-quiz">
-                <h2>Today’s quiz</h2>
-                <p class="todays-quiz-text">
-                  テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                </p>
-                <p id="answer">正解を見る</p>
-              </div>
-              <div class="pick-up">
-                <h2>今日は何する？</h2>
-                <p class="pick-up-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-              </div>
-            </article>
-            <article class="day-keyword">
-              <h2>今日に関係する言葉</h2>
-              <p class="today-keyword">七福神、四方拝、若水</p>
-            </article>
+            <% if @days_info %>
+          <article class="day-quiz">
+            <div class="todays-quiz">
+              <h2>Today’s quiz</h2>
+              <p class="todays-quiz-text"><%= @days_info.quiz_question %></p>
+              <p id="answer">正解を見る: <%= @days_info.quiz_answer %></p>
+            </div>
+            <div class="pick-up">
+              <h2>今日は何する？</h2>
+              <p class="pick-up-text"><%= @days_info.activity %></p>
+            </div>
+          </article>
+          <article class="day-keyword">
+            <h2>今日に関係する言葉</h2>
+            <p class="today-keyword"><%= @days_info.sub_keyword %></p>
+          </article>
+        <% end %>
           </div>
           <div class="search-link">
             <%= link_to image_tag("ask-google.png", alt: "Googleに聞くのボタン", width: "250"),
