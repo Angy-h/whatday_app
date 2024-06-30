@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
     end
 
     @days_info = DaysInfo.find_by(date: Date.today.strftime("%Y-%m-%d"))
+    @microposts = Micropost.all.paginate(page: params[:page])
   end
 
   def news
