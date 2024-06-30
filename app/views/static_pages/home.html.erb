@@ -30,7 +30,19 @@
             <div class="todays-quiz">
               <h2>Today’s quiz</h2>
               <p class="todays-quiz-text"><%= @days_info.quiz_question %></p>
-              <p id="answer">正解を見る: <%= @days_info.quiz_answer %></p>
+
+              <!-- 追加部分 -->
+              <!-- 正解を見るボタン -->
+              <p id="answer">正解を見る</p>
+
+              <!-- モーダルポップアップのHTML -->
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><%= @days_info.quiz_answer %></p>
+                </div>
+              </div>
+
             </div>
             <div class="pick-up">
               <h2>今日は何する？</h2>
