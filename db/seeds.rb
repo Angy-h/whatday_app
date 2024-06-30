@@ -22,3 +22,14 @@ users = User.order(:created_at).take(6)
   content = Faker::Lorem.sentence(word_count: 5)
   users.each { |user| user.microposts.create!(content: content) }
 end
+
+# 日付に関するインフォメーションを生成する
+DaysInfo.create(
+  date: '2024-06-30',
+  main_keyword: '6月30日キーワード',
+  quiz_question: '6月30日のクイズ',
+  quiz_answer: '6月30日のクイズの答え',
+  description: 'その日のキーワードの解説（6月30日）',
+  sub_keyword: '検索用キーワード（6月30日）',
+  activity: 'アクティビティの提案をします（6月30日）'
+)

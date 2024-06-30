@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  main_keyword: MyString
+  quiz_question: MyText
+  quiz_answer: MyString
+  description: MyText
+  sub_keyword: MyString
+  activity: MyText
+
+two:
+  date: MyString
+  main_keyword: MyString
+  quiz_question: MyText
+  quiz_answer: MyString
+  description: MyText
+  sub_keyword: MyString
+  activity: MyText

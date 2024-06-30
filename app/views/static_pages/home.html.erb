@@ -19,8 +19,8 @@
     <div class="container-day">
           <div class="information">
             <div class="day_word">
-              <p>今日は、<%= Time.now %> <span id="add1">元旦</span><span id="add2">です！</span></p>
-              <%= Time.now %>
+              <p>今日は、<%= Date.today.month %>月<%= Date.today.day %>日　 <span id="add1">元旦</span><span id="add2">です！</span></p>
+              <%= Date.today %>
             </div>
             <article class="day-quiz">
               <div class="todays-quiz">
